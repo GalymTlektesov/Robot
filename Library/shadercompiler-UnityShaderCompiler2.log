@@ -1,0 +1,18 @@
+Base path: '/Applications/2019.3.0f6/Unity.app/Contents', plugins path '/Applications/2019.3.0f6/Unity.app/Contents/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: disassembleShader
+  api=9 insize=1994 outsize=1994 ok=1
+Cmd: disassembleShader
+  api=9 insize=2469 outsize=2469 ok=1
+Cmd: disassembleShader
+  api=9 insize=2727 outsize=2727 ok=1
+Cmd: disassembleShader
+  api=9 insize=2727 outsize=2727 ok=1
+Cmd: disassembleShader
+  api=9 insize=0 outsize=57 ok=1
+Cmd: disassembleShader
+  api=9 insize=0 outsize=57 ok=1
+Cmd: disassembleShader
+  api=9 insize=0 outsize=57 ok=1
+Cmd: disassembleShader
+  api=9 insize=0 outsize=57 ok=1

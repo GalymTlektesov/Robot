@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{CDD799E1-8041-4C66-A4CC-BDB531DC6B00}|Default">
+  <MonoDevelop.Ide.ItemProperties.Vuforia.UnityExtensions PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Vuforia.UnityExtensions" expanded="True">
+            <Node name="Vuforia.UnityExtensions" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
