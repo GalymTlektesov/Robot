@@ -3,7 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Lean.Touch.LeanScale
     - Lean.Touch.LeanTouch
-    - RenderUpdate
+    - ScalePlus
     - TouchObject
     - TrackableEventHandler
     Unity.Rider.Editor.dll:
@@ -11,10 +11,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -25,8 +23,6 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
-    - UnityEngine.UI.Text
     Vuforia.UnityExtensions.dll:
     - Vuforia.ImageTargetBehaviour
     - Vuforia.TurnOffBehaviour
@@ -70,50 +66,40 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11226}
     - Class: 114
-      Script: {instanceID: 11392}
-    - Class: 114
-      Script: {instanceID: 11434}
-    - Class: 114
       Script: {instanceID: 11630}
     - Class: 114
       Script: {instanceID: 11732}
     - Class: 114
       Script: {instanceID: 11844}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11962}
     - Class: 114
-      Script: {instanceID: 11986}
+      Script: {instanceID: 11984}
+    - Class: 114
+      Script: {instanceID: 11992}
     - Class: 114
       Script: {instanceID: 11994}
     - Class: 114
-      Script: {instanceID: 11996}
+      Script: {instanceID: 12494}
     - Class: 114
-      Script: {instanceID: 12496}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12936}
     - Class: 114
-      Script: {instanceID: 12938}
+      Script: {instanceID: 13064}
     - Class: 114
-      Script: {instanceID: 13070}
+      Script: {instanceID: 13390}
     - Class: 114
-      Script: {instanceID: 13396}
-    - Class: 114
-      Script: {instanceID: 119026}
+      Script: {instanceID: 40766}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
       Script: {instanceID: 0}
     - Class: 223
       Script: {instanceID: 0}
@@ -1558,10 +1544,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: fb5d905ba3c137e48d69eec769d21658
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: RenderUpdate
+    className: ScalePlus
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

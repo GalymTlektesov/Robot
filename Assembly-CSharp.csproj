@@ -102,6 +102,7 @@
     <Compile Include="Assets\Lean\Touch\Scripts\LeanGesture.cs" />
     <Compile Include="Assets\Lean\Touch\Scripts\LeanSnapshot.cs" />
     <Compile Include="Assets\Lean\Touch\Scripts\LeanTouch.cs" />
+    <Compile Include="Assets\Scripts\ScalePlus.cs" />
     <Compile Include="Assets\Scripts\TouchObject.cs" />
     <Compile Include="Assets\Scripts\TrackableEventHandler.cs" />
     <None Include="Assets\Lean\Common\Examples\Fonts\OFL.txt" />
