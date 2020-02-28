@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Lean.Touch.LeanScale
     - Lean.Touch.LeanTouch
+    - PlusPosition
     - ScalePlus
     - TouchObject
     - TrackableEventHandler
@@ -84,15 +85,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 12842}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 12936}
+      Script: {instanceID: 12844}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 12938}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 40766}
+      Script: {instanceID: 13392}
+    - Class: 114
+      Script: {instanceID: 64510}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -932,6 +935,12 @@ ScriptsOnlyBuild:
     className: DefaultModelRecoEventHandler
   - hash:
       serializedVersion: 2
+      Hash: e26aeb03365e22cb154291bc55e3b2b7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScalePlus
+  - hash:
+      serializedVersion: 2
       Hash: 0e78074dc9982c5b5d2c5e112a658d35
     assemblyName: Assembly-CSharp.dll
     namespaceName: Lean.Touch
@@ -1544,11 +1553,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: fb5d905ba3c137e48d69eec769d21658
+      Hash: 998e29e4f197c60b2d07ed2c258e818a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ScalePlus
+    className: PlusPosition
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/user/Desktop/Admin/Programm/Robot/Build/Robot_0.1.apk
+  playerPath: /Users/user/Desktop/Admin/Programm/Robot/Build/Robot_0.2.apk
