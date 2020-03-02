@@ -1,4 +1,0 @@
-#Fri Feb 28 11:24:36 ALMT 2020
-base.0=/Users/user/Desktop/Admin/Programm/Robot/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
