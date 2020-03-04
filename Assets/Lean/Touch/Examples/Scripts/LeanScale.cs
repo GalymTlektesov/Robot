@@ -2,39 +2,39 @@ using UnityEngine;
 
 namespace Lean.Touch
 {
-	/// <summary>This script allows you to scale the current GameObject.</summary>
+	/// <summary>Этот script позволяет масштабировать текущий GameObject.</summary>
 	[HelpURL(LeanTouch.HelpUrlPrefix + "LeanScale")]
 	public class LeanScale : MonoBehaviour
 	{
-		[Tooltip("Ignore fingers with StartedOverGui?")]
+		[Tooltip("Игнорировать пальцы с StartedOverGui?")]
 		public bool IgnoreStartedOverGui = true;
 
-		[Tooltip("Ignore fingers with IsOverGui?")]
+		[Tooltip("Игнорировать пальцы с IsOverGui?")]
 		public bool IgnoreIsOverGui;
 
-		[Tooltip("Allows you to force rotation with a specific amount of fingers (0 = any)")]
+		[Tooltip("Позволяет принудительно вращать определенное количество пальцев (0 = любой)")]
 		public int RequiredFingerCount;
 
-		[Tooltip("Does scaling require an object to be selected?")]
+		[Tooltip("Требуется ли для масштабирования объект, который будет выбран?")]
 		public LeanSelectable RequiredSelectable;
 
-		[Tooltip("The camera that will be used to calculate the zoom (None = MainCamera)")]
+		[Tooltip("Камера, которая будет использоваться для расчета увеличения (Нет = MainCamera)")]
 		public Camera Camera;
 
-		[Tooltip("If you want the mouse wheel to simulate pinching then set the strength of it here")]
+		[Tooltip("Если вы хотите, чтобы колесо мыши имитировало зажатие, установите его здесь")]
 		[Range(-1.0f, 1.0f)]
 		public float WheelSensitivity;
 
-		[Tooltip("Should the scaling be performanced relative to the finger center?")]
+		[Tooltip("Должно ли масштабирование быть производительным относительно центра пальца?")]
 		public bool Relative;
 
-		[Tooltip("Should the scale value be clamped?")]
+		[Tooltip("Должно ли значение шкалы быть зафиксировано?")]
 		public bool ScaleClamp;
 
-		[Tooltip("The minimum scale value on all axes")]
+		[Tooltip("Минимальное значение шкалы по всем осям")]
 		public Vector3 ScaleMin;
 
-		[Tooltip("The maximum scale value on all axes")]
+		[Tooltip("Максимальное значение шкалы по всем осям")]
 		public Vector3 ScaleMax;
 
 #if UNITY_EDITOR
@@ -54,15 +54,15 @@ namespace Lean.Touch
 
 		protected virtual void Update()
 		{
-			// Get the fingers we want to use
+			// Получить пальцы, которые мы хотим использовать
 			var fingers = LeanSelectable.GetFingers(IgnoreStartedOverGui, IgnoreIsOverGui, RequiredFingerCount, RequiredSelectable);
 
-			// Calculate pinch scale, and make sure it's valid
+			// Рассчитайтываем масштаб щепотки и убедитесь, что он действителен
 			var pinchScale = LeanGesture.GetPinchScale(fingers, WheelSensitivity);
 
 			if (pinchScale != 1.0f)
 			{
-				// Perform the translation if this is a relative scale
+				// Выполните перевод, если это относительная шкала
 				if (Relative == true)
 				{
 					var pinchScreenCenter = LeanGesture.GetScreenCenter(fingers);
@@ -77,21 +77,21 @@ namespace Lean.Touch
 					}
 				}
 
-				// Perform the scaling
+				// Выполнить масштабирование
 				Scale(transform.localScale * pinchScale);
 			}
 		}
 
 		protected virtual void TranslateUI(float pinchScale, Vector2 pinchScreenCenter)
 		{
-			// Screen position of the transform
+			// Положение экрана трансформации
 			var screenPoint = RectTransformUtility.WorldToScreenPoint(Camera, transform.position);
 
-			// Push the screen position away from the reference point based on the scale
+			// Отодвиньте положение экрана от контрольной точки на основе scale
 			screenPoint.x = pinchScreenCenter.x + (screenPoint.x - pinchScreenCenter.x) * pinchScale;
 			screenPoint.y = pinchScreenCenter.y + (screenPoint.y - pinchScreenCenter.y) * pinchScale;
 
-			// Convert back to world space
+			// Конвертировать обратно в мировое пространство
 			var worldPoint = default(Vector3);
 
 			if (RectTransformUtility.ScreenPointToWorldPointInRectangle(transform.parent as RectTransform, screenPoint, Camera, out worldPoint) == true)
@@ -102,19 +102,19 @@ namespace Lean.Touch
 
 		protected virtual void Translate(float pinchScale, Vector2 screenCenter)
 		{
-			// Make sure the camera exists
+			// Убедитесь, что camera существует
 			var camera = LeanTouch.GetCamera(Camera, gameObject);
 
 			if (camera != null)
 			{
-				// Screen position of the transform
+				// Положение экрана transform
 				var screenPosition = camera.WorldToScreenPoint(transform.position);
 
-				// Push the screen position away from the reference point based on the scale
+				// Отодвиньте положение экрана от контрольной точки на основе scale
 				screenPosition.x = screenCenter.x + (screenPosition.x - screenCenter.x) * pinchScale;
 				screenPosition.y = screenCenter.y + (screenPosition.y - screenCenter.y) * pinchScale;
 
-				// Convert back to world space
+				// Конвертировать обратно в мировое пространство
 				transform.position = camera.ScreenToWorldPoint(screenPosition);
 			}
 			else
